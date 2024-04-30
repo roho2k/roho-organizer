@@ -20,7 +20,12 @@ function SideBar({ children, className = '' }: ClassNameOptionalAndChildren) {
 function SidebarLink({ className = '', children, unicode }: SideBarLinkProps) {
 	// refactor to link when we have actual links
 	return (
-		<li className={twMerge('flex gap-2 py-2 px-4', className)}>
+		<li
+			className={twMerge(
+				'flex gap-2 py-2 px-4 cursor-pointer',
+				className
+			)}
+		>
 			<Twemoji unicode={unicode} />
 			{children}
 		</li>
